@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Torah-Art: Ephraim Kalish on Bezalel and the biblical artist</title>
-<meta name="description" content="Books and articles by Ephraim Kalish, artist and filmmaker from Haifa, on Bezalel and creativity in the Bible.">
+<title>Torah-Art: Called to Create. Creativity in the light of Scripture</title>
+<meta name="description" content="Called to Create: what the Bible says about creative work and creative people. Art midrashim, biblical feasts, Hebrew words, artifacts, galleries and films by Ephraim Kalish.">
 <link rel="canonical" href="https://torah-art.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Torah-Art">
-<meta property="og:title" content="Torah-Art: Ephraim Kalish on Bezalel and the biblical artist">
-<meta property="og:description" content="Books and articles on Bezalel and creativity in the Bible.">
+<meta property="og:title" content="Torah-Art: Called to Create">
+<meta property="og:description" content="What the Bible says about creative work and creative people.">
 <meta property="og:url" content="https://torah-art.github.io/">
 <meta property="og:image" content="https://torah-art.github.io/bezalel-book/share.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -28,12 +28,6 @@ a{color:inherit}
 img{display:block;max-width:100%;height:auto}
 .wrap{width:min(100% - 32px,1040px);margin-inline:auto}
 header{border-bottom:1px solid var(--rule)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
-.logo{font:600 22px/1 var(--head);text-decoration:none;letter-spacing:.01em}
-.logo span{color:var(--accent)}
-.bar nav{display:flex;gap:18px;font-size:15px;font-weight:500}
-.bar nav a{text-decoration:none;color:var(--muted)}
-.bar nav a:hover{color:var(--ink)}
 section{padding:36px 0}
 .kicker{margin:0 0 10px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.15;margin:0}
@@ -86,50 +80,92 @@ footer li a:hover{text-decoration:underline}
   .book{grid-template-columns:1fr 1fr;gap:40px}
   .cols{grid-template-columns:repeat(3,1fr)}
 }
-@media (max-width:420px){.bar nav{gap:14px;font-size:14px}}
+/*HOME-CSS*/
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.logo{font:600 22px/1 var(--head);text-decoration:none;letter-spacing:.01em}
+.logo span{color:var(--accent)}
+.nav-main{display:none;align-items:center;gap:22px;font-size:15px;font-weight:500}
+.nav-main>a{text-decoration:none;color:var(--muted)}
+.nav-main>a:hover,.nav-main>a[aria-current]{color:var(--ink)}
+.dd,.menu{position:relative}
+.dd summary,.menu summary{list-style:none;cursor:pointer;color:var(--muted);font-size:15px;font-weight:500;padding:8px 0}
+.menu summary{font-weight:600}
+.dd summary::-webkit-details-marker,.menu summary::-webkit-details-marker{display:none}
+.dd summary:after,.menu summary:after{content:"";display:inline-block;width:6px;height:6px;margin-left:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-3px) rotate(45deg)}
+.dd[open] summary:after,.menu[open] summary:after{transform:translateY(1px) rotate(-135deg)}
+.dd summary:hover,.dd[open] summary{color:var(--ink)}
+.drop{list-style:none;margin:0;padding:8px 0;position:absolute;right:0;top:100%;z-index:20;background:#fff;border:1px solid var(--rule);border-radius:12px;box-shadow:0 10px 30px rgba(19,40,74,.12);min-width:250px}
+.dd .drop{left:-18px;right:auto}
+.drop li a{display:block;padding:9px 18px;text-decoration:none;font-size:15px;font-weight:500;color:var(--ink)}
+.drop li a:hover,.drop li a[aria-current]{color:var(--accent)}
+.drop li.sep{border-top:1px solid var(--rule);margin:6px 0}
+@media (min-width:900px){.nav-main{display:flex}.menu{display:none}}
+
+.cards{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:6px}
+@media (min-width:720px){.cards{gap:18px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}}
+.card{background:#fff;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--rule)}
+.card__img{display:block;aspect-ratio:4/3;background:var(--surface)}
+.card__img img{width:100%;height:100%;object-fit:cover}
+.card__in{padding:12px 12px 14px}
+@media (min-width:720px){.card__in{padding:14px 16px 18px}}
+.card .kicker{margin:0 0 6px}
+.card .kicker a{text-decoration:none}
+.card h3{font-size:18px;line-height:1.2}
+@media (min-width:720px){.card h3{font-size:21px}}
+.card h3 a{text-decoration:none}
+.card h3 a:hover{color:var(--accent)}
+.card .n{font-size:13px;color:var(--muted);margin:6px 0 0}
+.card .n a{color:inherit;text-decoration:none}
+.card .n a:hover{color:var(--accent)}
+/*/HOME-CSS*/
 </style>
 </head>
 <body>
+<!--HEADER-->
 <header>
   <div class="wrap bar">
-    <a class="logo" href="./">Torah<span>-</span>Art</a>
-    <nav aria-label="Main"><a href="#books">Books</a><a href="#articles">Articles</a><a href="#author">Author</a></nav>
+    <a class="logo" href="index.html">Torah<span>-</span>Art</a>
+    <nav class="nav-main" aria-label="Main"><a href="index.html#books">Books</a><details class="dd"><summary>Articles</summary><ul class="drop"><li><a href="articles/art-midrash/index.html">Art Midrash</a></li><li><a href="articles/artifacts/index.html">Artifacts</a></li><li><a href="articles/bible-and-artist/index.html">The Bible and the Artist</a></li><li><a href="articles/feasts/index.html">Biblical Feasts</a></li><li><a href="articles/israel-church/index.html">Israel and the Church</a></li><li><a href="articles/my-art-projects/index.html">My Art Projects</a></li><li><a href="articles/language/index.html">The Language of the Bible</a></li><li><a href="articles/galleries/index.html">Galleries</a></li><li class="sep"></li><li><a href="articles/index.html">Site Map</a></li></ul></details><a href="https://amendesignshop.etsy.com/">My Etsy Shop</a><a href="index.html#author">About the Author</a></nav>
+    <details class="menu"><summary>Menu</summary><ul class="drop"><li><a href="index.html#books">Ephraim Kalish&#x27;s Books</a></li><li class="sep"></li><li><a href="articles/art-midrash/index.html">Art Midrash</a></li><li><a href="articles/artifacts/index.html">Artifacts</a></li><li><a href="articles/bible-and-artist/index.html">The Bible and the Artist</a></li><li><a href="articles/feasts/index.html">Biblical Feasts</a></li><li><a href="articles/israel-church/index.html">Israel and the Church</a></li><li><a href="articles/my-art-projects/index.html">My Art Projects</a></li><li><a href="articles/language/index.html">The Language of the Bible</a></li><li><a href="articles/galleries/index.html">Galleries</a></li><li class="sep"></li><li><a href="articles/index.html">Site Map</a></li><li><a href="https://amendesignshop.etsy.com/">My Etsy Shop</a></li><li><a href="index.html#author">About the Author</a></li></ul></details>
   </div>
 </header>
+<!--/HEADER-->
 <main>
   <section class="intro">
     <div class="wrap">
       <p class="kicker">Ephraim Kalish</p>
-      <h1>Bezalel and the calling of the artist in the Bible</h1>
-      <p class="lead">Books and articles by an artist writing about an artist: Bezalel, the craftsman God called by name to build the Tabernacle, and what Scripture says about creative work.</p>
+      <h1>Called to Create</h1>
+      <p class="lead">The first person Scripture describes as filled with the Spirit of God was an artist, Bezalel (Ex 31:2–3). Torah-Art explores what the Bible says about creative work and creative people: art midrashim, the biblical feasts, Hebrew words, artifacts, galleries and films by Ephraim Kalish.</p>
     </div>
   </section>
 
-  <section class="surface" id="books" aria-labelledby="books-h">
+  
+
+  <!--ARTICLES-->
+  <section class="surface" id="articles" aria-labelledby="articles-h">
+    <div class="wrap">
+      <h2 id="articles-h">Articles</h2>
+      <div class="cards"><div class="card"><a class="card__img" href="articles/bezalel-under-the-shelter-of-the-most-high.html" tabindex="-1"><img src="articles/img/2014/03/Veseleil-Becalel.jpg" alt="" loading="lazy"></a><div class="card__in"><p class="kicker"><a href="articles/art-midrash/index.html">Art Midrash</a></p><h3><a href="articles/bezalel-under-the-shelter-of-the-most-high.html">Bezalel. Under the Shelter of the Most High</a></h3><p class="n"><a href="articles/art-midrash/index.html">23 articles in Art Midrash</a></p></div></div><div class="card"><a class="card__img" href="articles/the-beginnings-of-zionist-art-the-ades-synagogue.html" tabindex="-1"><img src="articles/img/2014/08/bezalel-hotemet.jpg" alt="" loading="lazy"></a><div class="card__in"><p class="kicker"><a href="articles/artifacts/index.html">Artifacts</a></p><h3><a href="articles/the-beginnings-of-zionist-art-the-ades-synagogue.html">The Beginnings of Zionist Art. The Ades Synagogue</a></h3><p class="n"><a href="articles/artifacts/index.html">5 articles in Artifacts</a></p></div></div><div class="card"><a class="card__img" href="articles/james-tissot-illustrator-of-the-bible.html" tabindex="-1"><img src="articles/img/2015/03/The-Plague-of-Flies.jpg" alt="" loading="lazy"></a><div class="card__in"><p class="kicker"><a href="articles/bible-and-artist/index.html">The Bible and the Artist</a></p><h3><a href="articles/james-tissot-illustrator-of-the-bible.html">James Tissot, Illustrator of the Bible</a></h3><p class="n"><a href="articles/bible-and-artist/index.html">17 articles in The Bible and the Artist</a></p></div></div><div class="card"><a class="card__img" href="articles/the-voice-of-the-shofar-part-1-a-high-calling.html" tabindex="-1"><img src="articles/img/2014/02/oblako-slavy-3.jpg" alt="" loading="lazy"></a><div class="card__in"><p class="kicker"><a href="articles/feasts/index.html">Biblical Feasts</a></p><h3><a href="articles/the-voice-of-the-shofar-part-1-a-high-calling.html">The Voice of the Shofar, Part 1. A High Calling</a></h3><p class="n"><a href="articles/feasts/index.html">21 articles in Biblical Feasts</a></p></div></div><div class="card"><a class="card__img" href="articles/turn-us-and-we-shall-be-turned.html" tabindex="-1"><img src="articles/img/2014/04/obati-nas.jpg" alt="" loading="lazy"></a><div class="card__in"><p class="kicker"><a href="articles/israel-church/index.html">Israel and the Church</a></p><h3><a href="articles/turn-us-and-we-shall-be-turned.html">Turn Us, and We Shall Be Turned!</a></h3><p class="n"><a href="articles/israel-church/index.html">2 articles in Israel and the Church</a></p></div></div><div class="card"><a class="card__img" href="articles/bezalel-son-of-light-the-film.html" tabindex="-1"><img src="https://i.ytimg.com/vi/2ZdmsMZv_Eg/hqdefault.jpg" alt="" loading="lazy"></a><div class="card__in"><p class="kicker"><a href="articles/my-art-projects/index.html">My Art Projects</a></p><h3><a href="articles/bezalel-son-of-light-the-film.html">Bezalel – Son of Light. The Film</a></h3><p class="n"><a href="articles/my-art-projects/index.html">1 article in My Art Projects</a></p></div></div><div class="card"><a class="card__img" href="articles/understanding-the-language-of-the-bible-look-to-the-root.html" tabindex="-1"><img src="articles/img/2014/07/MaxGurevich_chtenie-text.jpg" alt="" loading="lazy"></a><div class="card__in"><p class="kicker"><a href="articles/language/index.html">The Language of the Bible</a></p><h3><a href="articles/understanding-the-language-of-the-bible-look-to-the-root.html">Understanding the Language of the Bible: Look to the Root</a></h3><p class="n"><a href="articles/language/index.html">4 articles in The Language of the Bible</a></p></div></div><div class="card"><a class="card__img" href="articles/know-before-whom-you-stand-the-pillar-of-fire.html" tabindex="-1"><img src="articles/img-en/2015/05/20150516_142300a-750.jpg" alt="" loading="lazy"></a><div class="card__in"><p class="kicker"><a href="articles/galleries/index.html">Galleries</a></p><h3><a href="articles/know-before-whom-you-stand-the-pillar-of-fire.html">Know BEFORE WHOM You Stand. The Pillar of Fire</a></h3><p class="n"><a href="articles/galleries/index.html">2 articles in Galleries</a></p></div></div></div>
+      <div class="btns"><a class="btn btn--main" href="articles/index.html">All articles</a></div>
+    </div>
+  </section>
+  <!--/ARTICLES-->
+
+  <section id="books" aria-labelledby="books-h">
     <div class="wrap">
       <h2 id="books-h">Books</h2>
       <div class="book">
-        <a class="book__img" href="bezalel-book/"><img src="bezalel-book/share.jpg" width="1200" height="1150" alt="The book Bezalel. The Mystery of the Artist's Lineage" loading="lazy"></a>
+        <a class="book__img" href="bezalel-book/index.html"><img src="bezalel-book/assets/img/cover-square.jpg" width="1200" height="1150" alt="The book Bezalel. The Mystery of the Artist's Lineage" loading="lazy"></a>
         <div>
           <h3>Bezalel. The Mystery of the Artist's Lineage</h3>
           <p>The four names in Bezalel's genealogy (Ex 31:2), read in the original Hebrew, one name per chapter, as a key to the artist's calling.</p>
           <p class="meta">24-page illustrated hardcover and PDF</p>
           <div class="btns">
-            <a class="btn btn--main" href="bezalel-book/">About the book</a>
+            <a class="btn btn--main" href="bezalel-book/index.html">About the book</a>
             <a class="btn btn--line" href="https://amendesignshop.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order on Etsy</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="articles" aria-labelledby="articles-h">
-    <div class="wrap">
-      <h2 id="articles-h">Articles</h2>
-      <ul class="list">
-        <li><a href="bezalel-book/who-is-bezalel/"><strong>Who Is Bezalel?</strong><span>The artist of the Mishkan, the first person Scripture describes as filled with the Spirit of God (Ex 31:2–3)</span></a></li>
-      </ul>
-      <p class="note">Articles and art midrashim from the Torah-Art archive will be added here.</p>
     </div>
   </section>
 
@@ -160,8 +196,8 @@ footer li a:hover{text-decoration:underline}
       <p class="cform__status" role="status" aria-live="polite"></p>
     </form>
     <div class="cols">
-      <div><h3>Books</h3><ul><li><a href="bezalel-book/">Bezalel. The Mystery of the Artist's Lineage</a></li></ul></div>
-      <div><h3>Articles</h3><ul><li><a href="bezalel-book/who-is-bezalel/">Who Is Bezalel?</a></li></ul></div>
+      <div><h3>Books</h3><ul><li><a href="bezalel-book/index.html">Bezalel. The Mystery of the Artist's Lineage</a></li></ul></div>
+      <!--FOOTER-ARTICLES--><div><h3>Articles</h3><ul><li><a href="articles/art-midrash/index.html">Art Midrash</a></li><li><a href="articles/artifacts/index.html">Artifacts</a></li><li><a href="articles/bible-and-artist/index.html">The Bible and the Artist</a></li><li><a href="articles/feasts/index.html">Biblical Feasts</a></li><li><a href="articles/israel-church/index.html">Israel and the Church</a></li><li><a href="articles/my-art-projects/index.html">My Art Projects</a></li><li><a href="articles/language/index.html">The Language of the Bible</a></li><li><a href="articles/galleries/index.html">Galleries</a></li><li><a href="articles/index.html">Site Map</a></li></ul></div><!--/FOOTER-ARTICLES-->
       <div><h3>Ephraim Kalish</h3><ul><li><a href="#contact-author">Write to the author</a></li><li><a href="https://www.facebook.com/ephraimeduard.kalish/">Facebook</a></li><li><a href="https://www.etsy.com/shop/AmendesignShop?section_id=54528522">Books and films on Etsy</a></li><li><a href="https://amendesignshop.etsy.com/">AmendesignShop</a></li></ul></div>
     </div>
     <p class="legal">© Ephraim Kalish. Torah-Art</p>
@@ -175,5 +211,6 @@ fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new For
 if(d.success){f.reset();st.textContent='Thank you. Your message has been sent, and the author will reply by email.';}else{st.textContent='The message was not sent. Please try again in a minute.';}
 }).catch(function(){st.textContent='The message was not sent. Please check your connection and try again.';}).then(function(){btn.disabled=false;});});})();
 </script>
+<script>document.addEventListener('click',function(e){[].forEach.call(document.querySelectorAll('details.dd[open],details.menu[open]'),function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script>
 </body>
 </html>
