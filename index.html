@@ -106,6 +106,18 @@ footer li a:hover{text-decoration:underline}
 .drop li.sep{border-top:1px solid var(--rule);margin:6px 0}
 @media (min-width:900px){.nav-main{display:flex}.menu{display:none}.logo .logo-full{display:block}.logo .logo-mark{display:none}}
 
+/* order button: the same split pill as on the book site (bezalel-book), in a fixed top bar */
+body.has-order header{position:sticky;top:0;z-index:40;background:#fff}
+.buy-split{display:flex;height:40px;border-radius:999px;overflow:hidden;font-weight:600;font-size:15px;line-height:1;flex:none}
+.buy-split a{display:flex;align-items:center;justify-content:center;color:#fff!important;text-decoration:none!important;white-space:nowrap}
+.buy-split__main{flex:1 1 auto;padding:0 20px;background:#b8501c}
+.buy-split__main:hover{background:#a2461a}
+.buy-split__pdf{flex:0 0 auto;padding:0 16px;background:#4d5e78;border-left:2px solid #fff}
+.buy-split__pdf:hover{background:#3f4f67}
+.buy-split a:focus-visible{outline:2px solid #13284a;outline-offset:-4px}
+@media (min-width:900px){.buy-split{width:290px}}
+@media (max-width:899px){body.has-order .logo{display:none}body.has-order .bar .buy-split{flex:1 1 auto;height:42px;font-size:16px;margin-right:12px}}
+
 .cards{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:6px}
 @media (min-width:720px){.cards{gap:18px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}}
 .card{background:#fff;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--rule)}
