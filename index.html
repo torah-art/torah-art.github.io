@@ -83,6 +83,8 @@ footer li a:hover{text-decoration:underline}
   .cols{grid-template-columns:repeat(3,1fr)}
 }
 /*HOME-CSS*/
+header{position:sticky;top:0;z-index:40;background:#fff;transition:transform .25s ease}
+header.hdr-hide{transform:translateY(-101%)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
 .logo{display:flex;align-items:center;text-decoration:none;flex:none}
 .logo img{display:block}
@@ -107,7 +109,6 @@ footer li a:hover{text-decoration:underline}
 @media (min-width:900px){.nav-main{display:flex}.menu{display:none}.logo .logo-full{display:block}.logo .logo-mark{display:none}}
 
 /* order button: the same split pill as on the book site (bezalel-book), in a fixed top bar */
-body.has-order header{position:sticky;top:0;z-index:40;background:#fff}
 .buy-split{display:flex;height:40px;border-radius:999px;overflow:hidden;font-weight:600;font-size:15px;line-height:1;flex:none}
 .buy-split a{display:flex;align-items:center;justify-content:center;color:#fff!important;text-decoration:none!important;white-space:nowrap}
 .buy-split__main{flex:1 1 auto;padding:0 20px;background:#b8501c}
@@ -138,13 +139,13 @@ body.has-order header{position:sticky;top:0;z-index:40;background:#fff}
 .intro .kicker-after{margin:14px 0 0}
 </style>
 </head>
-<body>
+<body class="has-order">
 <!--HEADER-->
 <header>
   <div class="wrap bar">
     <a class="logo" href="index.html" aria-label="Torah-Art, home"><img class="logo-full" src="logo-toraart.png" alt="TORAART" width="248" height="60"><img class="logo-mark" src="logo-mark.png" alt="TORAART" width="44" height="44"></a>
     <nav class="nav-main" aria-label="Main"><a href="index.html#books">Books</a><details class="dd"><summary>Articles</summary><ul class="drop"><li><a href="articles/art-midrash/index.html">Art Midrash</a></li><li><a href="articles/artifacts/index.html">Artifacts</a></li><li><a href="articles/bible-and-artist/index.html">The Bible and the Artist</a></li><li><a href="articles/feasts/index.html">Biblical Feasts</a></li><li><a href="articles/israel-church/index.html">Israel and the Church</a></li><li><a href="articles/my-art-projects/index.html">My Art Projects</a></li><li><a href="articles/language/index.html">The Language of the Bible</a></li><li><a href="articles/travels/index.html">Travels</a></li><li><a href="articles/galleries/index.html">Galleries</a></li><li class="sep"></li><li><a href="articles/index.html">Site Map</a></li></ul></details><a href="https://amendesignshop.etsy.com/">My Etsy Shop</a><a href="index.html#author">About the Author</a></nav>
-    <details class="menu"><summary>Menu</summary><ul class="drop"><li><a href="index.html#books">Ephraim Kalish&#x27;s Books</a></li><li class="sep"></li><li><a href="articles/art-midrash/index.html">Art Midrash</a></li><li><a href="articles/artifacts/index.html">Artifacts</a></li><li><a href="articles/bible-and-artist/index.html">The Bible and the Artist</a></li><li><a href="articles/feasts/index.html">Biblical Feasts</a></li><li><a href="articles/israel-church/index.html">Israel and the Church</a></li><li><a href="articles/my-art-projects/index.html">My Art Projects</a></li><li><a href="articles/language/index.html">The Language of the Bible</a></li><li><a href="articles/travels/index.html">Travels</a></li><li><a href="articles/galleries/index.html">Galleries</a></li><li class="sep"></li><li><a href="articles/index.html">Site Map</a></li><li><a href="https://amendesignshop.etsy.com/">My Etsy Shop</a></li><li><a href="index.html#author">About the Author</a></li></ul></details>
+    <div class="buy-split"><a class="buy-split__main" href="https://amendesignshop.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book</a></div><details class="menu"><summary>Menu</summary><ul class="drop"><li><a href="index.html#books">Ephraim Kalish&#x27;s Books</a></li><li class="sep"></li><li><a href="articles/art-midrash/index.html">Art Midrash</a></li><li><a href="articles/artifacts/index.html">Artifacts</a></li><li><a href="articles/bible-and-artist/index.html">The Bible and the Artist</a></li><li><a href="articles/feasts/index.html">Biblical Feasts</a></li><li><a href="articles/israel-church/index.html">Israel and the Church</a></li><li><a href="articles/my-art-projects/index.html">My Art Projects</a></li><li><a href="articles/language/index.html">The Language of the Bible</a></li><li><a href="articles/travels/index.html">Travels</a></li><li><a href="articles/galleries/index.html">Galleries</a></li><li class="sep"></li><li><a href="articles/index.html">Site Map</a></li><li><a href="https://amendesignshop.etsy.com/">My Etsy Shop</a></li><li><a href="index.html#author">About the Author</a></li></ul></details>
   </div>
 </header>
 <!--/HEADER-->
@@ -230,5 +231,6 @@ if(d.success){f.reset();st.textContent='Thank you. Your message has been sent, a
 }).catch(function(){st.textContent='The message was not sent. Please check your connection and try again.';}).then(function(){btn.disabled=false;});});})();
 </script>
 <script>document.addEventListener('click',function(e){[].forEach.call(document.querySelectorAll('details.dd[open],details.menu[open]'),function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script>
+<script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

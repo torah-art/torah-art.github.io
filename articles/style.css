@@ -61,6 +61,17 @@ hr{border:0;border-top:1px solid var(--rule);margin:32px 0}
 .pn a:hover{border-color:var(--accent)}
 .pn small{display:block;color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
 .pn strong{font:600 18px/1.25 var(--head)}
+.more{padding:0 0 56px}
+.more h2{font-size:26px;margin:0 0 16px}
+.rel{display:grid;gap:16px}
+.rc{display:block;text-decoration:none;border:1px solid var(--rule);border-radius:12px;overflow:hidden;background:#fff}
+.rc:hover{border-color:var(--accent)}
+.rc img,.rc .ph{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--surface);margin:0;border-radius:0}
+.rc strong{display:block;font:600 18px/1.25 var(--head);padding:12px 16px 2px}
+.rc .d{display:block;padding:0 16px 14px;color:var(--muted);font-size:14px}
+.allin{margin:18px 0 0;font-weight:600}
+.allin a{text-decoration:none;color:var(--accent)}
+@media (min-width:700px){.rel{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:720px){.pn{grid-template-columns:1fr 1fr}.pn .nx{text-align:right;grid-column:2}}
 main{min-height:50vh}
 footer{background:var(--navy);color:#fff;padding:32px 0 28px;font-size:15px;margin-top:40px}
@@ -72,6 +83,8 @@ footer li a:hover{text-decoration:underline}
 .legal{margin-top:26px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.55);font-size:13px}
 @media (min-width:720px){.cols{grid-template-columns:repeat(3,1fr)}}
 
+header{position:sticky;top:0;z-index:40;background:#fff;transition:transform .25s ease}
+header.hdr-hide{transform:translateY(-101%)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
 .logo{display:flex;align-items:center;text-decoration:none;flex:none}
 .logo img{display:block}
@@ -96,7 +109,6 @@ footer li a:hover{text-decoration:underline}
 @media (min-width:900px){.nav-main{display:flex}.menu{display:none}.logo .logo-full{display:block}.logo .logo-mark{display:none}}
 
 /* order button: the same split pill as on the book site (bezalel-book), in a fixed top bar */
-body.has-order header{position:sticky;top:0;z-index:40;background:#fff}
 .buy-split{display:flex;height:40px;border-radius:999px;overflow:hidden;font-weight:600;font-size:15px;line-height:1;flex:none}
 .buy-split a{display:flex;align-items:center;justify-content:center;color:#fff!important;text-decoration:none!important;white-space:nowrap}
 .buy-split__main{flex:1 1 auto;padding:0 20px;background:#b8501c}
