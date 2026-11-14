@@ -112,7 +112,30 @@ header.hdr-hide{transform:translateY(-101%)}
 .books-btn{display:inline-flex;align-items:center;height:36px;padding:0 16px;border-radius:999px;background:#b8501c;color:#fff!important;text-decoration:none!important;font-weight:600;font-size:15px;line-height:1;white-space:nowrap;flex:none}
 .books-btn:hover{background:#a2461a}
 .books-btn:focus-visible{outline:2px solid #13284a;outline-offset:2px}
-@media (max-width:899px){.bar .books-btn{margin-left:auto;margin-right:2px;padding:0 14px}.bar{gap:10px}.bar .logo{flex:0 1 auto;min-width:0}.bar .logo .logo-full{display:block;width:100%;max-width:210px;height:auto}.bar .logo .logo-mark{display:none}.bar .menu{flex:none}.bar .menu summary{white-space:nowrap}}
+@media (max-width:899px){.bar .books-btn{order:3;margin:0;padding:0 14px}.bar .menu{order:2;margin-left:auto;position:static}.bar{position:relative}.bar .menu .drop{right:0;max-width:calc(100vw - 32px)}.bar{gap:10px}.bar .logo{flex:0 1 auto;min-width:0}.bar .logo .logo-full{display:block;width:100%;max-width:210px;height:auto}.bar .logo .logo-mark{display:none}.bar .menu{flex:none}.bar .menu summary{white-space:nowrap}}
 
+/* search (same as on the Russian site toraart-ru.github.io) */
+.search{position:relative;flex:none}
+.search summary{list-style:none;cursor:pointer;display:grid;place-items:center;width:42px;height:38px;border:1px solid var(--rule);border-radius:3px;background:var(--bg);color:var(--ink)}
+.search summary::-webkit-details-marker{display:none}
+.search[open] summary{color:var(--accent);border-color:var(--accent)}
+.sbox{position:absolute;right:0;top:46px;width:min(560px,calc(100vw - 32px));background:#fff;border:1px solid var(--rule);border-radius:4px;box-shadow:0 8px 24px rgba(19,40,74,.14);padding:12px;z-index:50}
+.sbox input,.spage input{width:100%;box-sizing:border-box;font:400 18px/1.3 var(--text);padding:10px 12px;border:1px solid #cdbb9a;border-radius:3px;background:#fff;color:var(--ink)}
+.sbox input:focus,.spage input:focus{outline:2px solid var(--accent);outline-offset:0}
+.sres{max-height:60vh;overflow:auto}
+.sres:empty{display:none}
+.shit{display:block;text-decoration:none;padding:10px 4px;border-bottom:1px solid var(--rule);color:var(--ink)}
+.shit:hover strong{color:var(--accent)}
+.shit strong{display:block;font-family:var(--head);font-size:20px;font-weight:600;line-height:1.2;margin-bottom:3px}
+.shit span{display:block;font-size:15px;line-height:1.4;color:var(--muted)}
+.shit mark{background:#f3dfb0;color:inherit;padding:0 1px}
+.sall{display:block;padding:10px 4px 2px;color:var(--accent);font-weight:700;text-decoration:none}
+.snone,.scount{margin:10px 4px 0;color:var(--muted);font-size:15px}
+.spage{padding:10px 0 30px}
+.spage .sres{max-height:none}
+@media (min-width:900px){.bar .search{margin-left:auto}.bar .books-btn{margin-left:0}}
+@media (max-width:899px){.bar .search{order:1;margin-left:auto}.bar .menu{margin-left:0}.sbox{position:fixed;left:12px;right:12px;top:64px;width:auto}}
+
+/* word tables in articles (.wt), added in the shofar article */
 .wt{margin:26px 0;overflow-x:auto}.wt table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.45}.wt th,.wt td{border-bottom:1px solid rgba(127,127,127,.3);padding:8px 10px;text-align:left;vertical-align:top}.wt th{font-size:13px;color:var(--muted);font-weight:600}.wt .he{font-size:1.35em;line-height:1.4}.wt-note{font-size:14px;line-height:1.55;color:var(--muted);margin:10px 0 0}
 @media (max-width:639px){.wt thead{display:none}.wt table,.wt tbody,.wt tr,.wt td{display:block;width:100%}.wt tr{border:1px solid rgba(127,127,127,.3);border-radius:10px;padding:6px 12px;margin-bottom:12px}.wt td{border:0;padding:4px 0;display:grid;grid-template-columns:42% 1fr;gap:8px}.wt td::before{content:attr(data-label);font-size:13px;color:var(--muted)}}
