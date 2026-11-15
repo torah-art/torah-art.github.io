@@ -39,7 +39,7 @@
 <p>I very much wanted this sound to go on sounding in the church, so that it would not stop. Our guidance was the prophetic word from the prophet Jeremiah 51:27: "Set ye up a standard in the land, blow the shofar (KJV: the trumpet) among the nations, prepare the nations against her, call together against her the kingdoms of Ararat, Minni, and Ashchenaz; appoint a captain against her; cause the horses to come up as the rough caterpillers."</p>
 <p>This passage of Scripture tells of the battle against Babylon. And it says here that in the kingdoms of Ararat the shofar must sound.</p>
 <p>After our missionary was killed, I felt a very strong desire to take the shofar into my hands and blow it, to acquire one in order to blow it, so that the sound of the shofar would always sound in Armenia, in the kingdom of Ararat.</p>
-<figure><img src="img/2016/02/original.jpg" alt="" loading="lazy"></figure>
+<figure><a class="zoom" href="img/2016/02/original.jpg"><img src="img/2016/02/original.jpg" alt="" loading="lazy"></a></figure>
 <p>And the Lord gave me a gift: a Yemenite (kudu) shofar was sent to me as a present from Jerusalem. I learned from YouTube videos how to blow it, how to shape the lips and breathe out, and other technical details. Gradually I began to succeed.</p>
 <p>But then some doubts arose: may a woman blow the shofar? After all, the Bible does not speak of it directly. But I felt inside that what I was doing was right. I learned a great deal from the Torah-Art site, where I watched the film "The Voice of Shofar" and read articles about it. They inspired me really and with full strength, in spite of being a woman, to blow the shofar, to proclaim the glory of the Lord and through the blowing to carry out its prophetic action.</p>
 <p>In the closing part of <a href="https://www.youtube.com/watch?v=8i5XwtzAzUM">this video</a> you can hear how I blow the shofar.</p>
@@ -70,6 +70,18 @@ window.TA_SEARCH=run;
 document.addEventListener('DOMContentLoaded',function(){var d=document.querySelector('details.search');if(!d)return;var i=d.querySelector('input'),b=d.querySelector('.sres');
 d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i.focus()},50);var mm=document.querySelector('details.menu');if(mm)mm.open=false}});
 i.addEventListener('input',function(){run(i.value,b,6)});
-var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
+var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
+function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
+function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function close(){lb.hidden=true;document.documentElement.style.overflow=''}
+function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
+lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
+lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
+document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null||list.length<2)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null},{passive:true})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.zoom,.gallery a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+if(!lb)build();list=links();lb.classList.toggle('one',list.length<2);show(list.indexOf(a));lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

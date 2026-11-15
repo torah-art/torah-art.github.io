@@ -37,7 +37,7 @@
 <p class="he">כָּל־יֹשְׁבֵי תֵבֵל וְשֹׁכְנֵי אָרֶץ<br>כִּנְשֹׂא־נֵס הָרִים תִּרְאוּ <strong style="font-size:1.3em">וְכִתְקֹעַ שׁוֹפָר תִּשְׁמָעוּ׃</strong></p>
 <p style="text-align:right">KOL YOSHVEI TEVEL VE-SHOCHNEI ARETS, KI-NSO NES HARIM TIR'U VE-CHITKO'A SHOFAR TISHMA'U</p>
 </div>
-<figure><img src="img/2015/09/MONTE-SINAI-750.jpg" alt="" loading="lazy"></figure>
+<figure><a class="zoom" href="img/2015/09/MONTE-SINAI-750.jpg"><img src="img/2015/09/MONTE-SINAI-750.jpg" alt="" loading="lazy"></a></figure>
 <audio controls preload="none" src="audio/2015/09/Yithro.mp3"></audio>
 <p>Composer: Daniel Kruglov. From the cycle "The Weekly Torah Portions"</p>
 <p>The correct translation: "…when the <strong>shofar</strong> sounds, listen!", VE-CHITKO'A SHOFAR TISHMA'U (you can hear the Hebrew pronunciation <strong><a href="https://www.youtube.com/watch?v=szfOWayvcLY">here</a></strong>).</p>
@@ -48,7 +48,7 @@
 <strong class="he">מִשְׁמָע</strong> (MISHMA): hearing, listening, obedience, meaning, sense</p>
 <p><strong class="he">שֵׁם</strong> (SHEM), a word of the same root, is not just a name a person hears and answers to. SHEM does something to a person if he is MUSHMA, obedient to it. A NAME is what (ideally) defines and expresses a person's calling, makes him what the Creator designed him to be.</p>
 <h3>"…when the shofar sounds, obey!"</h3>
-<figure><img src="img/2015/09/merino-ram_750.jpg" alt="" loading="lazy"></figure>
+<figure><a class="zoom" href="img/2015/09/merino-ram_750.jpg"><img src="img/2015/09/merino-ram_750.jpg" alt="" loading="lazy"></a></figure>
 <audio controls preload="none" src="audio/2015/08/Rosh-ha-Shana_blowing-Shofar.mp3"></audio>
 <p>The command to hear the voice of the shofar is the most important commandment of the feast of YOM TERUAH (the Feast of Blowing the Shofar, which tradition calls ROSH HA-SHANA). To hear the shofar is not simply not to stop one's ears, or to be near the one blowing it. TO HEAR means to prepare one's heart, to humble oneself before the Creator in obedience.</p>
 <div class="video"><div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/szfOWayvcLY" loading="lazy" allowfullscreen title="Video"></iframe></div></div>
@@ -80,6 +80,18 @@ window.TA_SEARCH=run;
 document.addEventListener('DOMContentLoaded',function(){var d=document.querySelector('details.search');if(!d)return;var i=d.querySelector('input'),b=d.querySelector('.sres');
 d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i.focus()},50);var mm=document.querySelector('details.menu');if(mm)mm.open=false}});
 i.addEventListener('input',function(){run(i.value,b,6)});
-var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
+var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
+function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
+function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function close(){lb.hidden=true;document.documentElement.style.overflow=''}
+function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
+lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
+lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
+document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null||list.length<2)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null},{passive:true})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.zoom,.gallery a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+if(!lb)build();list=links();lb.classList.toggle('one',list.length<2);show(list.indexOf(a));lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

@@ -32,7 +32,7 @@
 <main>
 <article class="narrow" data-pagefind-body><p class="kicker" data-pagefind-ignore><a href="feasts/index.html">Biblical Feasts</a></p><h1>Shavuot. The Feast of the Gift of Freedom</h1><p class="meta" data-pagefind-ignore>2018 · <a href="feasts/index.html">Biblical Feasts</a>, <a href="art-midrash/index.html">Art Midrash</a></p><div class="body"><h4>The revelation at Sinai through the eyes of an artist. <a href="https://www.youtube.com/watch?v=gPvO7R0D0FE">A DECLARATION OF FREEDOM</a>.</h4>
 <p>"I have seen an end of all perfection: but thy commandment is exceeding broad" (Ps. 119:96).</p>
-<figure><img src="img/2014/06/gora-sinai.jpg" alt="" loading="lazy"><figcaption>Mount Sinai</figcaption></figure>
+<figure><a class="zoom" href="img/2014/06/gora-sinai.jpg"><img src="img/2014/06/gora-sinai.jpg" alt="" loading="lazy"></a><figcaption>Mount Sinai</figcaption></figure>
 <p>"Perfect freedom through self-limitation is an amazing paradox of divine providence." (Olga Medvedeva)</p>
 <p>We know several of the artists who stood at Mount Sinai. There were many artists there, but of these three we know the names and genealogies. The Torah also bears witness to their unique creative work. They stood at the foot of the mountain at that terrible time when the mountain shook, and there was smoke as from a furnace, and lightning, and the voice of the shofar, and the voice from heaven: "I am the LORD thy God… Thou shalt not make unto thee…"</p>
 <p>Here are their names: <a href="bezalel-under-the-shelter-of-the-most-high.html">Bezalel</a>, son of Uri, son of <a href="bezalel-grandfather-hur.html">Hur</a>, called by the Creator of heaven and earth to set up the sanctuary for God Most High; also his helper Oholiav, son of Ahisamakh, of the tribe of Dan; and the artist Bezalel's grandfather, Hur, of the tribe of Yehudah. This Hur, <a href="called-to-be-refined-bezalel.html">according to tradition</a>, laid down his life on the altar before the LORD for the sake of kiddush ha-Shem (the sanctification of the name of the Most High).</p>
@@ -70,11 +70,11 @@
 <p>So the second utterance is not serfdom; on the contrary, it is a charter of liberty! It is as if all your debts, which you are unable to pay and for which you had been sentenced to life imprisonment, were torn up before your eyes. But One came who paid in your place and set you free…</p>
 <p>"Anokhi Adonai… asher hotsetikha mi-beit avadim", "I am the LORD… which have brought thee out of the house of bondage" (the first commandment). God repeats this deed of His again and again, which shows the importance of this name: "God who sets free from slavery".</p>
 <h4>AN ACT OF CREATION</h4>
-<figure><img src="img/2014/06/desjat-zapovedej-1.jpg" alt="" loading="lazy"><figcaption>ANOKHI ADONAI ELOHEKHA (I am the LORD thy God)</figcaption></figure>
+<figure><a class="zoom" href="img/2014/06/desjat-zapovedej-1.jpg"><img src="img/2014/06/desjat-zapovedej-1.jpg" alt="" loading="lazy"></a><figcaption>ANOKHI ADONAI ELOHEKHA (I am the LORD thy God)</figcaption></figure>
 <p>By His word God created the universe and all that fills it. "Let there be…" is creation out of nothing.</p>
 <p>In bringing Israel out of Egypt, God creates for Himself a free people out of a slave. "Thou shalt have no other…", says the Creator from heaven. And by this utterance of His He creates something new. The Ten Great Commandments are not limitations, not a halt, not an obstacle: they are God's greatest act of creation. And by this creative work He invites Israel into His creation.</p>
 <p>David, supremely creative, gifted in every respect, talented in music and poetry, architecture and sculpture, saw in the law not a slavish limitation of creative freedom but sweetness and perfection. He learned creativity from the perfect commandment… The words of David: "I have seen an end of all perfection: but thy commandment is exceeding broad" (Ps. 119:96).</p>
-<figure><img src="img/2014/06/SOFER1.jpg" alt="" loading="lazy"><figcaption>A Torah scribe</figcaption></figure>
+<figure><a class="zoom" href="img/2014/06/SOFER1.jpg"><img src="img/2014/06/SOFER1.jpg" alt="" loading="lazy"></a><figcaption>A Torah scribe</figcaption></figure>
 <p>Everything that seems perfect to us, where we see freedom, all of it has an end and is limited. And only the COMMANDMENT of the Most High, which in our ignorance we sometimes take for a limitation, alone gives unlimited freedom of creativity. The perfect law sets free and perfects the one who keeps it.</p>
 <div class="textimg">
 <p>96 I have seen an end of all perfection: but thy commandment is exceeding broad.<br>
@@ -116,6 +116,18 @@ window.TA_SEARCH=run;
 document.addEventListener('DOMContentLoaded',function(){var d=document.querySelector('details.search');if(!d)return;var i=d.querySelector('input'),b=d.querySelector('.sres');
 d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i.focus()},50);var mm=document.querySelector('details.menu');if(mm)mm.open=false}});
 i.addEventListener('input',function(){run(i.value,b,6)});
-var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
+var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
+function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
+function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function close(){lb.hidden=true;document.documentElement.style.overflow=''}
+function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
+lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
+lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
+document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null||list.length<2)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null},{passive:true})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.zoom,.gallery a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+if(!lb)build();list=links();lb.classList.toggle('one',list.length<2);show(list.indexOf(a));lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

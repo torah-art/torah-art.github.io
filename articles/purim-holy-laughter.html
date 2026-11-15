@@ -33,12 +33,12 @@
 <article class="narrow" data-pagefind-body><p class="kicker" data-pagefind-ignore><a href="bible-and-artist/index.html">The Bible and the Artist</a></p><h1>Purim. Holy Laughter</h1><p class="meta" data-pagefind-ignore>2015 · <a href="bible-and-artist/index.html">The Bible and the Artist</a></p><div class="body"><p>"Laughter itself, humour, is a very serious weapon." Sergey Komyagin.</p>
 <p>The "<a href="http://www.eleven.co.il/?mode=article&amp;id=13355"><strong>Purim-shpil</strong></a>" (Yiddish: Purim play) is a humorous and satirical play traditionally performed in Jewish communities at the feast of Purim. At first such plays were simple and short (the text did not exceed a few hundred rhymed lines), but by the early 18th century the influence of European theatre began to show in the Purim-shpils, and they gradually turned into dramatic productions with many roles and musical accompaniment.</p>
 <p>For the beginning of the conversation, see "<a href="purim-shpil-exposing-evil.html"><strong>Purim-shpil. Exposing Evil…</strong></a>"</p>
-<figure><img src="img/2015/03/purim-11.jpg" alt="" loading="lazy"></figure>
+<figure><a class="zoom" href="img/2015/03/purim-11.jpg"><img src="img/2015/03/purim-11.jpg" alt="" loading="lazy"></a></figure>
 <h3>Purim. Holy laughter</h3>
 <p>My guests are the actors of the Ecclesiastes Drama Theatre in Yaroslavl, Sergey Komyagin and Sergey Lukyanov.</p>
 <p><strong>Ephraim Kalish:</strong> Do you think that laughter and ridicule are acceptable for a believer? It is well known that throughout its history the church has looked negatively on this kind of thing and has condemned laughter.</p>
 <p><strong>Sergey Komyagin:</strong> Laughter itself, humour, is a very serious weapon. When the famous Charlie Chaplin made his masterpiece "The Great Dictator" and ridiculed Hitler in it, he became Hitler's personal enemy. Hitler hated no one as much as he hated Charlie Chaplin. Why? Because Hitler was ridiculed there. You can do anything… You can dislike Hitler, you can curse him.</p>
-<figure><img src="img/2015/03/velikiy-diktator.jpg" alt="" loading="lazy"><figcaption>Charlie Chaplin and his film "The Great Dictator", 1940</figcaption></figure>
+<figure><a class="zoom" href="img/2015/03/velikiy-diktator.jpg"><img src="img/2015/03/velikiy-diktator.jpg" alt="" loading="lazy"></a><figcaption>Charlie Chaplin and his film "The Great Dictator", 1940</figcaption></figure>
 <p><strong>Sergey Lukyanov:</strong> It won't help!</p>
 <p><strong>Sergey Komyagin:</strong> Right. But once it has been ridiculed… as Scripture says: "He that sitteth in the heavens shall laugh: the Lord shall have them in derision" (Ps. 2:4). He, the Lord, gave us laughter.</p>
 <p>So in fact holy things too can be ridiculed, and in that way we would destroy them, because it is a very serious weapon. It is like an atomic bomb. You can criticise something holy and it will not be as destructive as ridiculing it.</p>
@@ -87,6 +87,18 @@ window.TA_SEARCH=run;
 document.addEventListener('DOMContentLoaded',function(){var d=document.querySelector('details.search');if(!d)return;var i=d.querySelector('input'),b=d.querySelector('.sres');
 d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i.focus()},50);var mm=document.querySelector('details.menu');if(mm)mm.open=false}});
 i.addEventListener('input',function(){run(i.value,b,6)});
-var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
+var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
+function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
+function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function close(){lb.hidden=true;document.documentElement.style.overflow=''}
+function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
+lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
+lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
+document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null||list.length<2)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null},{passive:true})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.zoom,.gallery a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+if(!lb)build();list=links();lb.classList.toggle('one',list.length<2);show(list.indexOf(a));lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

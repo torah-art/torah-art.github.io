@@ -32,7 +32,7 @@
 <main>
 <article class="narrow" data-pagefind-body><p class="kicker" data-pagefind-ignore><a href="feasts/index.html">Biblical Feasts</a></p><h1>Pesach: What Did Our Fathers Bake Matzah From in the Wilderness?</h1><p class="meta" data-pagefind-ignore>2014 · <a href="feasts/index.html">Biblical Feasts</a></p><div class="body"><p>One exceptional celebration of Pesach that the Torah points to took place after the departure from Egypt, in the wilderness of Sinai. And our fathers fulfilled the commandment to eat only <a href="matzah-the-unleavened-bread-how-to-make-matzah-recipe-and-video.html">unleavened bread</a>. The feast itself is named after this commandment: the <a href="unleavened-bread-that-came-down-from-heaven.html">FEAST OF MATZOT</a> (the Feast of Unleavened Bread). In general, during the forty years of wandering in the wilderness, as far as one can understand from the Torah, the Israelites did not circumcise their male infants, did not keep the feasts, did not offer sacrifices and did not keep the commandments of the Torah in full.</p>
 <p>Pesach: what did our fathers bake matzah from in the wilderness? The question is by no means an idle one.</p>
-<figure><img src="img/2014/04/agada-pesah-ptichiy-golovy-800.jpg" alt="" loading="lazy"><figcaption>The Bird's Head Haggadah</figcaption></figure>
+<figure><a class="zoom" href="img/2014/04/agada-pesah-ptichiy-golovy-800.jpg"><img src="img/2014/04/agada-pesah-ptichiy-golovy-800.jpg" alt="" loading="lazy"></a><figcaption>The Bird's Head Haggadah</figcaption></figure>
 <p>Eidl: What do you say, am I right in understanding that <a href="unleavened-bread-that-came-down-from-heaven.html">matzah in the wilderness was made from manna</a>?<br>
 Menachem: I'm not sure it was made in the wilderness at all. It is a commandment that came into force in the Land.<br>
 Eidl: You mean the feasts were not kept in the wilderness?<br>
@@ -63,12 +63,12 @@ Eidl: But in any case it served as bread?!<br>
 Menachem: Yes. But I'm not sure matzah could be made from it.<br>
 Eidl: But it is said of it that it was prepared in different ways, including baking?<br>
 Menachem: Yes. But matzah must be made of grain. If it could leaven, unleavened bread could be made from it. That is, if so, then it is a grain.</p>
-<figure><img src="img/2014/04/BH_Exodus_1a.jpg" alt="" loading="lazy"><figcaption>The Bird's Head Haggadah</figcaption></figure>
+<figure><a class="zoom" href="img/2014/04/BH_Exodus_1a.jpg"><img src="img/2014/04/BH_Exodus_1a.jpg" alt="" loading="lazy"></a><figcaption>The Bird's Head Haggadah</figcaption></figure>
 <p>Eidl: Yes, but it is bread from heaven!!! That is, it is kosher and completely unleavened by definition! It is a symbol of the Messiah!<br>
 Menachem: Then they ate matzah all the time. What is special about Pesach? There in Bemidbar (Num. 9:1–5) the command to eat unleavened bread is given. Why give it if there is nothing else?<br>
 Eidl: Well, yes, it was a special blessed state of the wilderness. God called our fathers into the wilderness to keep a feast. The unleavened bread, if we suppose that manna was unleavened, could well have been made of manna, and in Eretz Yisrael it was already earthly bread.<br>
 Menachem: I'm not sure. After all, bread is a grain thing. You can't make bread out of cabbage. Of course you can draw the midrash that you are drawing. But…</p>
-<figure><img src="img/2014/04/agada-pasha-ptichiy-golovy.jpg" alt="" loading="lazy"><figcaption>The Bird's Head Haggadah</figcaption></figure>
+<figure><a class="zoom" href="img/2014/04/agada-pasha-ptichiy-golovy.jpg"><img src="img/2014/04/agada-pasha-ptichiy-golovy.jpg" alt="" loading="lazy"></a><figcaption>The Bird's Head Haggadah</figcaption></figure>
 <p>Eidl: Yeshua is the bread that came down from heaven. He was completely without leaven! Yeshua is without leaven. As a symbol, manna, representing what is heavenly, ought to be without leaven!<br>
 Menachem: The fathers ate that bread and died.<br>
 Eidl: Well, yes: "the word did not profit them, not being mixed with faith" (Heb. 4:2).<br>
@@ -101,6 +101,18 @@ window.TA_SEARCH=run;
 document.addEventListener('DOMContentLoaded',function(){var d=document.querySelector('details.search');if(!d)return;var i=d.querySelector('input'),b=d.querySelector('.sres');
 d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i.focus()},50);var mm=document.querySelector('details.menu');if(mm)mm.open=false}});
 i.addEventListener('input',function(){run(i.value,b,6)});
-var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
+var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
+function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
+function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function close(){lb.hidden=true;document.documentElement.style.overflow=''}
+function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
+lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
+lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
+document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null||list.length<2)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null},{passive:true})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.zoom,.gallery a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+if(!lb)build();list=links();lb.classList.toggle('one',list.length<2);show(list.indexOf(a));lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

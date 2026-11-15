@@ -37,7 +37,7 @@
 </div>
 <p>Called to make a sanctuary for God Most High, the Israelite artist Bezalel also received, together with his calling, the gift of TEACHING others. Three words are related to the word "TO TEACH": ORE (parent), MORE (teacher), YORE (archer).</p>
 <p>On how to find words of the same root in the Hebrew text of Scripture, see <a href="understanding-the-language-of-the-bible-look-to-the-root.html">here</a>.</p>
-<figure><img src="img/2014/07/uchitel-strelok.jpg" alt="" loading="lazy"><figcaption>Sculptor Luis Kaish, "The Archer"</figcaption></figure>
+<figure><a class="zoom" href="img/2014/07/uchitel-strelok.jpg"><img src="img/2014/07/uchitel-strelok.jpg" alt="" loading="lazy"></a><figcaption>Sculptor Luis Kaish, "The Archer"</figcaption></figure>
 <p>The word "TO TEACH" that we find in this passage of Scripture is <span class="he">להורות</span> (Heb. LEHOROT).</p>
 <p><span class="he">להורות / ירה</span> LEHOROT / YARAH (03384): 1. to throw; 2. to shoot (an arrow); 3. to water, give to drink; 4. to instruct, teach, point out, direct, prescribe.</p>
 <p>In the articles "<a href="the-school-of-bezalel-the-calling-to-teach.html">The School of Bezalel. The Calling to Teach</a>" and "<a href="the-school-of-bezalel-the-parent.html">The School of Bezalel. The Parent</a>" you will find the beginning of our look at this word and at words of the same root, which help us enter more deeply into the essence of the process of LEHOROT (Heb. "to teach", Exod. 35:34).</p>
@@ -54,7 +54,7 @@
 <p>The life of man, created in the likeness of God, certainly has a purpose. Accordingly, man's creative work and his art also have a purpose.</p>
 <p>In the book of Judges (20:16) the Bible speaks of the accuracy of the sons of Binyamin in slinging stones: "Among all this people there were seven hundred chosen men lefthanded; every one could sling stones at an hair breadth, and not miss." So accurate was their aim, so clearly did they see the target.</p>
 <h3>2. The strength to reach the target</h3>
-<figure><img src="img/2014/07/uchitel-strelok-2.jpg" alt="" loading="lazy"><figcaption>Assyrian slingers</figcaption></figure>
+<figure><a class="zoom" href="img/2014/07/uchitel-strelok-2.jpg"><img src="img/2014/07/uchitel-strelok-2.jpg" alt="" loading="lazy"></a><figcaption>Assyrian slingers</figcaption></figure>
 <p>To shoot means to send (an arrow) with great force.</p>
 <p>The range of a modern bow is 90 m, a rather modest result compared with the archers of antiquity. The draw weight of a sports bow is about 20 kg.</p>
 <p>The ancient bows found by archaeologists were much more powerful, with a draw weight of up to 80 kg!.. So by no means every strong modern man could handle one.</p>
@@ -64,7 +64,7 @@
 <p style="text-align:right">Homer, "Odyssey", Book 21 (tr. Samuel Butler)</p>
 </div>
 <h3>3. The arrow does the will of the archer</h3>
-<p><img src="img/2014/07/prizvanie-zel.jpg" alt="" loading="lazy"></p>
+<p><a class="zoom" href="img/2014/07/prizvanie-zel.jpg"><img src="img/2014/07/prizvanie-zel.jpg" alt="" loading="lazy"></a></p>
 <p>This hardly needs any special explanation. Clearly an arrow does not choose its target at its own discretion, "but does the will of the one who sent it".</p>
 <p>Interestingly, in Hebrew the word for sinning is bound up with losing direction and, as a result, missing the target: HATA (sin) literally means missing the mark. If we turn aside from the target set for us by the Creator, we miss it, as it is said:</p>
 <div class="textimg">
@@ -108,6 +108,18 @@ window.TA_SEARCH=run;
 document.addEventListener('DOMContentLoaded',function(){var d=document.querySelector('details.search');if(!d)return;var i=d.querySelector('input'),b=d.querySelector('.sres');
 d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i.focus()},50);var mm=document.querySelector('details.menu');if(mm)mm.open=false}});
 i.addEventListener('input',function(){run(i.value,b,6)});
-var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
+var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
+function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
+function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function close(){lb.hidden=true;document.documentElement.style.overflow=''}
+function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
+lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
+lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
+document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null||list.length<2)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null},{passive:true})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.zoom,.gallery a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+if(!lb)build();list=links();lb.classList.toggle('one',list.length<2);show(list.indexOf(a));lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

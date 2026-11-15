@@ -31,12 +31,12 @@
 </header>
 <main>
 <article class="narrow" data-pagefind-body><p class="kicker" data-pagefind-ignore><a href="bible-and-artist/index.html">The Bible and the Artist</a></p><h1>On the Church&#x27;s Attitude to Artists: Andrey Dirienko</h1><p class="meta" data-pagefind-ignore>2014 · <a href="bible-and-artist/index.html">The Bible and the Artist</a></p><div class="body"><p>Andrey Dirienko touches on one of the important revelations for the church in the last days: the question of the CHURCH's attitude to ARTISTS.</p>
-<img src="img/2014/05/132.jpg" alt="" loading="lazy">
+<a class="zoom" href="img/2014/05/132.jpg"><img src="img/2014/05/132.jpg" alt="" loading="lazy"></a>
 <p>In the winter I was at a conference in South America. A man had been invited there whom they call the pastor to presidents. He has preached to many of them, so that many of them regard him as a kind of spiritual mentor.</p>
 <p>And he said an amazing thing that touched me very deeply. He said: we Protestants fought against idols, and along with the idols we threw creativity out of the church. If you look carefully at the Middle Ages, all creative people then were looking for ways to bring their gifts into the church. And they were all needed in the church.</p>
 <p>But we fought idols so hard, we were so afraid of them, that creative people today go to Hollywood, because the church does not need them.</p>
 <p>There were many of us ministers at that conference, more than ten thousand. And then this man challenged us. He said: "Pastors, think, pray to God about how to bring creative people back into the church, so that they can see how God can be glorified in the church through their talents. Instead of saying 'Hollywood is dirty, Hollywood is vulgar', show these people that they are wanted here, that God needs them." That is the task he set before us.</p>
-<figure><img src="img/2014/05/vangog1.jpg" alt="" loading="lazy"><figcaption>Vincent Willem van Gogh (1853–1890)</figcaption></figure>
+<figure><a class="zoom" href="img/2014/05/vangog1.jpg"><img src="img/2014/05/vangog1.jpg" alt="" loading="lazy"></a><figcaption>Vincent Willem van Gogh (1853–1890)</figcaption></figure>
 <p>He gave us a simple example: the sad story of the artist Van Gogh. He was born into a pastor's family. His grandfather was a pastor too. It was his destiny that he simply had to become a pastor. But he felt a <a href="the-school-of-bezalel-the-calling-to-teach.html">calling to art</a>. So the pastor and the artist were constantly fighting inside him. At times he would start preaching, and he gave many sermons in his life. Then he would start painting. Then he would preach again and paint again. He was driven to madness by this division within himself.</p>
 <p>And this pastor asked us a question: which of you remembers even one of Van Gogh's sermons? One has to admit they were mediocre… It was not his gift. But which of you knows his paintings?</p>
 <p>So he did have a gift after all: the gift of an artist. And through this gift he could have glorified the Messiah so greatly.</p>
@@ -71,6 +71,18 @@ window.TA_SEARCH=run;
 document.addEventListener('DOMContentLoaded',function(){var d=document.querySelector('details.search');if(!d)return;var i=d.querySelector('input'),b=d.querySelector('.sres');
 d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i.focus()},50);var mm=document.querySelector('details.menu');if(mm)mm.open=false}});
 i.addEventListener('input',function(){run(i.value,b,6)});
-var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
+var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
+function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
+function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function close(){lb.hidden=true;document.documentElement.style.overflow=''}
+function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
+lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
+lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
+document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null||list.length<2)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null},{passive:true})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.zoom,.gallery a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+if(!lb)build();list=links();lb.classList.toggle('one',list.length<2);show(list.indexOf(a));lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

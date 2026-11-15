@@ -31,12 +31,12 @@
 </header>
 <main>
 <article class="narrow" data-pagefind-body><p class="kicker" data-pagefind-ignore><a href="artifacts/index.html">Artifacts</a></p><h1>The Beginnings of Zionist Art. The Ades Synagogue</h1><p class="meta" data-pagefind-ignore>2014 · <a href="artifacts/index.html">Artifacts</a>, <a href="bible-and-artist/index.html">The Bible and the Artist</a></p><div class="body"><p>Some twenty years ago, as part of a course at the Hebrew University of Jerusalem on Mount Scopus (Hebrew: Har ha-Tsofim), I attended an off-campus lecture in one of the oldest and most beautiful synagogues of modern times in Jerusalem. Unfortunately, my Hebrew was still taking its first unsteady steps in those days, and so the name of the synagogue, which meant nothing to me then, slipped out of my notes.</p>
-<figure><img src="img/2014/08/bezalel-hotemet.jpg" alt="" loading="lazy"><figcaption>The former Bezalel building, 1906. The seal of the School of Jewish Art</figcaption></figure>
+<figure><a class="zoom" href="img/2014/08/bezalel-hotemet.jpg"><img src="img/2014/08/bezalel-hotemet.jpg" alt="" loading="lazy"></a><figcaption>The former Bezalel building, 1906. The seal of the School of Jewish Art</figcaption></figure>
 <p>Quite recently a blessed thought came to me: to publish a post with a photo (see the photo above). For those who are not familiar with it, this is the old seal (if anything from the very beginning of the last century can be called old) of the Bezalel Academy of Arts in Jerusalem, which, by the way, now stands on that same Mount Scopus, right next to the Hebrew University. The photo shows the Ark of the Covenant, a drawing by Boris Schatz, founder of the Bezalel School of Jewish Art, which to this day is the official seal of the school.</p>
 <p>So I published this seal together with a request:</p>
-<figure><img src="img/2014/08/ades-fasade.jpg" alt="" loading="lazy"><figcaption>The façade of the Ades Synagogue</figcaption></figure>
+<figure><a class="zoom" href="img/2014/08/ades-fasade.jpg"><img src="img/2014/08/ades-fasade.jpg" alt="" loading="lazy"></a><figcaption>The façade of the Ades Synagogue</figcaption></figure>
 <p>"Brothers and sisters, experts on Jerusalem, help me, bevakasha (please)! I really need it! I need to find out the name of a synagogue. I think it is a Sephardi synagogue in Jerusalem. Its Aron ha-Kodesh (the cabinet where the Torah scrolls are kept) is made of walnut and covered with oriental ornament inlaid with mother-of-pearl and pearls. What matters most to me is that it was painted by one of the students of the Beit Midrash le-Omanut Yehudit "Bezalel". It is one of the first synagogues whose paintings show the emblems of the tribes of Israel."</p>
-<figure><img src="img/2014/08/ades-interier.jpg" alt="" loading="lazy"><figcaption>The interior of the Ades Synagogue</figcaption></figure>
+<figure><a class="zoom" href="img/2014/08/ades-interier.jpg"><img src="img/2014/08/ades-interier.jpg" alt="" loading="lazy"></a><figcaption>The interior of the Ades Synagogue</figcaption></figure>
 <p>That same day Alex Blend replied that I meant the synagogue in Nachlaot, not far from Agrippas Street. At one time he used to take people there early in the morning "to have a look".</p>
 <p>When, you may ask, is a Jew happy? When he first loses something and then finds it. My joy knew no bounds. At last the synagogue stood before me again.</p>
 <p>Read the continuation in <a href="the-beginnings-of-zionist-art-part-ii.html">the next article</a>.</p>
@@ -69,6 +69,18 @@ window.TA_SEARCH=run;
 document.addEventListener('DOMContentLoaded',function(){var d=document.querySelector('details.search');if(!d)return;var i=d.querySelector('input'),b=d.querySelector('.sres');
 d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i.focus()},50);var mm=document.querySelector('details.menu');if(mm)mm.open=false}});
 i.addEventListener('input',function(){run(i.value,b,6)});
-var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
+var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
+function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
+function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function close(){lb.hidden=true;document.documentElement.style.overflow=''}
+function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
+lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
+lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
+document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null||list.length<2)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null},{passive:true})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.zoom,.gallery a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+if(!lb)build();list=links();lb.classList.toggle('one',list.length<2);show(list.indexOf(a));lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

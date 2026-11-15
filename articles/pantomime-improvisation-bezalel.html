@@ -31,7 +31,7 @@
 </header>
 <main>
 <article class="narrow" data-pagefind-body><p class="kicker" data-pagefind-ignore><a href="art-midrash/index.html">Art Midrash</a></p><h1>PANTOMIME Improvisation | Bezalel</h1><p class="meta" data-pagefind-ignore>2016 · <a href="art-midrash/index.html">Art Midrash</a></p><div class="body"><p>Pantomime Improvisation | Bezalel (Ex.31: 2-11)</p>
-<figure><img src="img/2016/01/bezalel-art-midrash-in-mime-2.jpg" alt="" loading="lazy"></figure>
+<figure><a class="zoom" href="img/2016/01/bezalel-art-midrash-in-mime-2.jpg"><img src="img/2016/01/bezalel-art-midrash-in-mime-2.jpg" alt="" loading="lazy"></a></figure>
 <p>I call my seminars on Bezalel, Yuval, David, and other creative figures in Scripture Art Midrash. The Hebrew word midrash refers to the searching and study of Scripture. But for me, the word art is just as important. An artist has a unique way of exploring and discovering meaning — through creativity itself, using the gifts and artistic tools God has given them. That is why I seek to involve different forms of artistic expression in exploring and communicating what Scripture reveals about creativity.</p>
 <p>Once, here in Israel, something extraordinary happened. Perhaps for the first time in history, the revelation I had discovered in Bezalel's genealogy was expressed through dance. A professional dancer interpreted all four names in his lineage through movement: Bezalel; Uri, his father; Hur, his grandfather; and Yehuda, the tribe from which he came.</p>
 <p>In this video, you can see another attempt to explore the same revelation — this time through mime. Unlike the earlier dance, this performance does not interpret the entire genealogy. Instead, it is a single Art Midrash devoted to Bezalel. The performance was created by Swiss mime artist Stefan Rotman as a response to what he had heard during my seminar.</p>
@@ -65,6 +65,18 @@ window.TA_SEARCH=run;
 document.addEventListener('DOMContentLoaded',function(){var d=document.querySelector('details.search');if(!d)return;var i=d.querySelector('input'),b=d.querySelector('.sres');
 d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i.focus()},50);var mm=document.querySelector('details.menu');if(mm)mm.open=false}});
 i.addEventListener('input',function(){run(i.value,b,6)});
-var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
+var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
+function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
+function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function close(){lb.hidden=true;document.documentElement.style.overflow=''}
+function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
+lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
+lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
+document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null||list.length<2)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null},{passive:true})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.zoom,.gallery a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+if(!lb)build();list=links();lb.classList.toggle('one',list.length<2);show(list.indexOf(a));lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

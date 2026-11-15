@@ -30,7 +30,7 @@
   </div>
 </header>
 <main>
-<article class="narrow" data-pagefind-body><p class="kicker" data-pagefind-ignore><a href="israel-church/index.html">Israel and the Church</a></p><h1>The Mystery of the Apostle Paul. Israel and the Church</h1><p class="meta" data-pagefind-ignore>2015 · <a href="israel-church/index.html">Israel and the Church</a></p><div class="body"><figure><img src="img/2015/12/Fikos-Antonios.jpg" alt="" loading="lazy"><figcaption>Artist Fikos Antonios (detail)</figcaption></figure>
+<article class="narrow" data-pagefind-body><p class="kicker" data-pagefind-ignore><a href="israel-church/index.html">Israel and the Church</a></p><h1>The Mystery of the Apostle Paul. Israel and the Church</h1><p class="meta" data-pagefind-ignore>2015 · <a href="israel-church/index.html">Israel and the Church</a></p><div class="body"><figure><a class="zoom" href="img/2015/12/Fikos-Antonios.jpg"><img src="img/2015/12/Fikos-Antonios.jpg" alt="" loading="lazy"></a><figcaption>Artist Fikos Antonios (detail)</figcaption></figure>
 <p>At one of my art midrashim on Israel and the Church I asked the audience: do you consider Paul the least of the apostles? The answer was a deep silence. And it was clearly not a sign of agreement. When I pointed out that Paul calls himself that in the First Letter to the Corinthians (15:9), the audience still refused to accept this description. "Don't you trust the apostle's words?" I insisted. Then the audience agreed as one that what Paul said was nothing other than an expression of his great modesty.</p>
 <p>I think Paul did not suffer from excessive shyness. And of course there is no question of modesty here: more than once we hear from the apostle phrases like "I laboured more abundantly than they all…" and "the very chiefest apostles…", as well as his repeated and rather wordy proofs that he is in no way behind the chiefest apostles.</p>
 <p>What, then, made Paul speak of himself as the least of the apostles? I think he said these words with bitter irony and pain.</p>
@@ -71,6 +71,18 @@ window.TA_SEARCH=run;
 document.addEventListener('DOMContentLoaded',function(){var d=document.querySelector('details.search');if(!d)return;var i=d.querySelector('input'),b=d.querySelector('.sres');
 d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i.focus()},50);var mm=document.querySelector('details.menu');if(mm)mm.open=false}});
 i.addEventListener('input',function(){run(i.value,b,6)});
-var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
+var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
+function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
+function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function close(){lb.hidden=true;document.documentElement.style.overflow=''}
+function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
+lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
+lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
+document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null||list.length<2)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null},{passive:true})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.zoom,.gallery a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+if(!lb)build();list=links();lb.classList.toggle('one',list.length<2);show(list.indexOf(a));lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()})})();</script><script>(function(){var h=document.querySelector('header');if(!h)return;var y=window.pageYOffset;window.addEventListener('scroll',function(){var n=window.pageYOffset,open=h.querySelector('details[open]');if(n>y+4&&n>h.offsetHeight&&!open){h.classList.add('hdr-hide');}else if(n<y-1||n<=h.offsetHeight){h.classList.remove('hdr-hide');}y=n;},{passive:true});})();</script>
 </body>
 </html>

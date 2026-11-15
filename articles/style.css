@@ -139,3 +139,17 @@ header.hdr-hide{transform:translateY(-101%)}
 /* word tables in articles (.wt), added in the shofar article */
 .wt{margin:26px 0;overflow-x:auto}.wt table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.45}.wt th,.wt td{border-bottom:1px solid rgba(127,127,127,.3);padding:8px 10px;text-align:left;vertical-align:top}.wt th{font-size:13px;color:var(--muted);font-weight:600}.wt .he{font-size:1.35em;line-height:1.4}.wt-note{font-size:14px;line-height:1.55;color:var(--muted);margin:10px 0 0}
 @media (max-width:639px){.wt thead{display:none}.wt table,.wt tbody,.wt tr,.wt td{display:block;width:100%}.wt tr{border:1px solid rgba(127,127,127,.3);border-radius:10px;padding:6px 12px;margin-bottom:12px}.wt td{border:0;padding:4px 0;display:grid;grid-template-columns:42% 1fr;gap:8px}.wt td::before{content:attr(data-label);font-size:13px;color:var(--muted)}}
+
+/* picture viewer: every picture opens over the page; arrows go through all pictures of the page */
+a.zoom,.gallery a{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,16,30,.94);display:flex;align-items:center;justify-content:center;padding:56px 64px;touch-action:pan-y pinch-zoom}
+.lb[hidden]{display:none}
+.lb img{max-width:100%;max-height:100%;width:auto;height:auto;margin:0;border-radius:2px;box-shadow:0 8px 40px rgba(0,0,0,.5)}
+.lb button{position:absolute;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;cursor:pointer;display:grid;place-items:center;padding:0}
+.lb button:hover{background:rgba(255,255,255,.28)}
+.lb .lb-x{top:10px;right:12px;width:44px;height:44px;font-size:28px;line-height:1}
+.lb .lb-p,.lb .lb-n{top:50%;transform:translateY(-50%);width:48px;height:48px;font-size:30px;line-height:1}
+.lb .lb-p{left:10px}.lb .lb-n{right:10px}
+.lb .lb-c{position:absolute;top:20px;left:0;right:0;text-align:center;color:rgba(255,255,255,.8);font:500 15px/1 system-ui,sans-serif;pointer-events:none}
+.lb.one .lb-p,.lb.one .lb-n,.lb.one .lb-c{display:none}
+@media (max-width:600px){.lb{padding:56px 8px 72px}.lb .lb-p,.lb .lb-n{top:auto;bottom:12px;transform:none}.lb .lb-p{left:calc(50% - 60px)}.lb .lb-n{right:calc(50% - 60px)}}
