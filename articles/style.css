@@ -163,3 +163,12 @@ a.zoom,.gallery a{cursor:zoom-in}
 .lb .lb-t{position:absolute;bottom:14px;left:72px;right:72px;text-align:center;color:#fff;font:400 15px/1.4 system-ui,sans-serif}
 .lb .lb-t:empty{display:none}
 @media (max-width:600px){.lb .lb-t{bottom:70px;left:12px;right:12px;font-size:14px}}
+
+.bk-series{margin:36px 0 40px}.bk-series h2,.bk h2{font-family:'EB Garamond',Georgia,serif}
+.bks{display:flex;flex-direction:column;gap:40px;margin-bottom:56px}
+.bk{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:28px;align-items:start;padding-top:32px;border-top:1px solid #e3ddd2}
+.bk__img img{display:block;width:100%;height:auto;border-radius:6px}
+.bk h2{margin:0 0 10px;font-size:30px;line-height:1.15}.bk h2 a{color:inherit;text-decoration:none}
+.bk p{margin:0 0 14px}.bk .go{font-weight:600}
+.bk__arts{margin-top:18px}.bk__arts h3{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#576782;margin:0 0 8px}
+@media (max-width:719px){.bk{grid-template-columns:1fr;gap:16px}.bk h2{font-size:25px}}
