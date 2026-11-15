@@ -173,6 +173,7 @@ a.zoom,.gallery a{cursor:zoom-in}
 .bk__arts{margin-top:18px}.bk__arts h3{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#576782;margin:0 0 8px}
 @media (max-width:719px){.bk{grid-template-columns:1fr;gap:16px}.bk h2{font-size:25px}}
 
+.body .he{color:#9a4216}
 .vru-list{display:flex;flex-direction:column;gap:10px;margin-top:28px;padding-top:16px;border-top:1px solid #e3ddd2}
 .body .vru{margin:0}
 .vru__b{display:flex;align-items:center;justify-content:flex-start;gap:12px;width:100%;max-width:360px;padding:6px;border:1px solid #e3ddd2;border-radius:10px;background:#fff;cursor:pointer;font:inherit;color:#576782;text-align:left}
