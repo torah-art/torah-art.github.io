@@ -153,3 +153,13 @@ a.zoom,.gallery a{cursor:zoom-in}
 .lb .lb-c{position:absolute;top:20px;left:0;right:0;text-align:center;color:rgba(255,255,255,.8);font:500 15px/1 system-ui,sans-serif;pointer-events:none}
 .lb.one .lb-p,.lb.one .lb-n,.lb.one .lb-c{display:none}
 @media (max-width:600px){.lb{padding:56px 8px 72px}.lb .lb-p,.lb .lb-n{top:auto;bottom:12px;transform:none}.lb .lb-p{left:calc(50% - 60px)}.lb .lb-n{right:calc(50% - 60px)}}
+
+/* collage: 3+ pictures in a row as square tiles, captions small under each tile */
+.collage{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin:24px 0}
+.collage figure{margin:0}
+.collage img{margin:0;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px}
+.collage figcaption{font-size:13px;line-height:1.35;margin-top:6px;text-align:left;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:600px){.collage{grid-template-columns:repeat(2,1fr);gap:8px}}
+.lb .lb-t{position:absolute;bottom:14px;left:72px;right:72px;text-align:center;color:#fff;font:400 15px/1.4 system-ui,sans-serif}
+.lb .lb-t:empty{display:none}
+@media (max-width:600px){.lb .lb-t{bottom:70px;left:12px;right:12px;font-size:14px}}

@@ -78,9 +78,7 @@ if only for this, it is not worth burning bridges…</p>
 <figure><a class="zoom" href="img/2015/11/20151107_125143-2.jpg"><img src="img/2015/11/20151107_125143-2.jpg" alt="" loading="lazy"></a><figcaption>Corinthian capitals that once crowned the colonnade of the splendid prayer hall</figcaption></figure>
 <figure><div class="gallery"><a class="zoom" href="img/2015/11/20151107_125235-2.jpg"><img src="img/2015/11/20151107_125235-2.jpg" alt="" loading="lazy"></a><a class="zoom" href="img/2015/11/20151107_125254-1.jpg"><img src="img/2015/11/20151107_125254-1.jpg" alt="" loading="lazy"></a><a class="zoom" href="img/2015/11/20151107_125327-1.jpg"><img src="img/2015/11/20151107_125327-1.jpg" alt="" loading="lazy"></a></div><figcaption>The Aron ha-Kodesh (the place for the Torah scrolls) and a fig seedling that has pushed through the ancient stones</figcaption></figure>
 <p>The prayer hall, 19 × 17.7 m, had the traditional three rows of columns arranged in the shape of the letter Π (a squared U), with heart-shaped corner columns. The columns had Corinthian capitals of various designs. On the east a courtyard adjoined the synagogue, surrounded by other buildings.</p>
-<figure><a class="zoom" href="img/2015/11/20151107_130902.jpg"><img src="img/2015/11/20151107_130902.jpg" alt="" loading="lazy"></a></figure>
-<figure><a class="zoom" href="img/2015/11/20151107_130643-1.jpg"><img src="img/2015/11/20151107_130643-1.jpg" alt="" loading="lazy"></a><figcaption>Heart-shaped corner columns, typical of the synagogues of Galilee</figcaption></figure>
-<figure><a class="zoom" href="img/2015/11/20151107_135542-1.jpg"><img src="img/2015/11/20151107_135542-1.jpg" alt="" loading="lazy"></a><figcaption>View of the Sea of Tiberias (Lake Kinneret)</figcaption></figure>
+<div class="collage"><figure><a class="zoom" href="img/2015/11/20151107_130902.jpg"><img src="img/2015/11/20151107_130902.jpg" alt="" loading="lazy"></a></figure><figure><a class="zoom" href="img/2015/11/20151107_130643-1.jpg"><img src="img/2015/11/20151107_130643-1.jpg" alt="" loading="lazy"></a><figcaption>Heart-shaped corner columns, typical of the synagogues of Galilee</figcaption></figure><figure><a class="zoom" href="img/2015/11/20151107_135542-1.jpg"><img src="img/2015/11/20151107_135542-1.jpg" alt="" loading="lazy"></a><figcaption>View of the Sea of Tiberias (Lake Kinneret)</figcaption></figure></div>
 <p>Author: Ephraim Kalish (photos: Ephraim and Veta Kalish)</p>
 <p>The article uses material from <strong><a href="http://www.israeltoday.ru/tosee/sinagogi/sinagoga_arbel/">israeltoday.ru</a></strong> (in Russian).</p>
 <p>Music by Daniel Kruglov, poem by Roland Kulessky, read by Ephraim Kalish:</p>
@@ -114,10 +112,10 @@ d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i
 i.addEventListener('input',function(){run(i.value,b,6)});
 var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
 function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
-function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function show(i){cur=(i+list.length)%list.length;var a=list[cur];im.src=a.getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length;var f=a.closest('figure'),c=f&&f.querySelector('figcaption');lb.querySelector('.lb-t').textContent=c?c.textContent:''}
 function close(){lb.hidden=true;document.documentElement.style.overflow=''}
 function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
-lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+lb.innerHTML='<div class="lb-c"></div><img alt=""><div class="lb-t"></div><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
 document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
 lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
 document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});

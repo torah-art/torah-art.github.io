@@ -76,10 +76,7 @@
 <p>From one of Oleksandr Antonyuk's exhibitions</p>
 <p><strong>Ephraim Kalish:</strong> Unfortunately, it is not very common for an artist of a high level to be on friendly terms with the Bible. Sadly, today these things go separate ways. Why do you think faith hinders an artist today?</p>
 <p><strong>Oleksandr Antonyuk:</strong> It is hard for me to answer for other artists, but it seems to me that people who dive into Scripture may not feel the need to paint, and those who can paint do not want to dive in… Faith cannot hinder an artist… Another question is what goals the artist sets himself. If it is to succeed, then he will depend on the "demand" shaped by the people who sell art…</p>
-<figure><a class="zoom" href="img/2014/09/Ieremija.jpg"><img src="img/2014/09/Ieremija.jpg" alt="" loading="lazy"></a><figcaption>Artist Oleksandr Antonyuk. The Prophet Jeremiah</figcaption></figure>
-<figure><a class="zoom" href="img/2014/09/Kozel-Azazelja-.jpg"><img src="img/2014/09/Kozel-Azazelja-.jpg" alt="" loading="lazy"></a><figcaption>Artist Oleksandr Antonyuk. The Goat for Azazel</figcaption></figure>
-<figure><a class="zoom" href="img/2014/09/Ilija-prorok.jpg"><img src="img/2014/09/Ilija-prorok.jpg" alt="" loading="lazy"></a><figcaption>Artist Oleksandr Antonyuk. Elijah</figcaption></figure>
-<figure><a class="zoom" href="img/2014/09/mudrecy-vostoka.jpg"><img src="img/2014/09/mudrecy-vostoka.jpg" alt="" loading="lazy"></a><figcaption>Artist Oleksandr Antonyuk. The Wise Men from the East</figcaption></figure>
+<div class="collage"><figure><a class="zoom" href="img/2014/09/Ieremija.jpg"><img src="img/2014/09/Ieremija.jpg" alt="" loading="lazy"></a><figcaption>Artist Oleksandr Antonyuk. The Prophet Jeremiah</figcaption></figure><figure><a class="zoom" href="img/2014/09/Kozel-Azazelja-.jpg"><img src="img/2014/09/Kozel-Azazelja-.jpg" alt="" loading="lazy"></a><figcaption>Artist Oleksandr Antonyuk. The Goat for Azazel</figcaption></figure><figure><a class="zoom" href="img/2014/09/Ilija-prorok.jpg"><img src="img/2014/09/Ilija-prorok.jpg" alt="" loading="lazy"></a><figcaption>Artist Oleksandr Antonyuk. Elijah</figcaption></figure><figure><a class="zoom" href="img/2014/09/mudrecy-vostoka.jpg"><img src="img/2014/09/mudrecy-vostoka.jpg" alt="" loading="lazy"></a><figcaption>Artist Oleksandr Antonyuk. The Wise Men from the East</figcaption></figure></div>
 <p>See also another interview with Oleksandr Antonyuk:</p>
 <div class="video"><div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/PChOS8JUVw4" loading="lazy" allowfullscreen title="Video"></iframe></div></div>
 <hr>
@@ -113,10 +110,10 @@ d.addEventListener('toggle',function(){if(d.open){load();setTimeout(function(){i
 i.addEventListener('input',function(){run(i.value,b,6)});
 var mm=document.querySelector('details.menu');if(mm)mm.addEventListener('toggle',function(){if(mm.open)d.open=false})})})();</script><script>(function(){var lb,im,cnt,list=[],cur=0;
 function links(){return [].slice.call(document.querySelectorAll('a.zoom,.gallery a'))}
-function show(i){cur=(i+list.length)%list.length;im.src=list[cur].getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length}
+function show(i){cur=(i+list.length)%list.length;var a=list[cur];im.src=a.getAttribute('href');cnt.textContent=(cur+1)+' / '+list.length;var f=a.closest('figure'),c=f&&f.querySelector('figcaption');lb.querySelector('.lb-t').textContent=c?c.textContent:''}
 function close(){lb.hidden=true;document.documentElement.style.overflow=''}
 function build(){lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Picture');
-lb.innerHTML='<div class="lb-c"></div><img alt=""><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
+lb.innerHTML='<div class="lb-c"></div><img alt=""><div class="lb-t"></div><button type="button" class="lb-p" aria-label="Previous picture">\u2039</button><button type="button" class="lb-n" aria-label="Next picture">\u203a</button><button type="button" class="lb-x" aria-label="Close">\u00d7</button>';
 document.body.appendChild(lb);im=lb.querySelector('img');cnt=lb.querySelector('.lb-c');
 lb.addEventListener('click',function(e){var t=e.target;if(t.closest('.lb-p')){show(cur-1)}else if(t.closest('.lb-n')){show(cur+1)}else if(t===im&&list.length>1){show(cur+1)}else{close()}});
 document.addEventListener('keydown',function(k){if(lb.hidden)return;if(k.key==='Escape')close();else if(k.key==='ArrowLeft')show(cur-1);else if(k.key==='ArrowRight')show(cur+1)});
