@@ -222,6 +222,7 @@ a.zoom,.gallery a{cursor:zoom-in}
 .about-art .hero{margin:6px 0 22px}
 .about-art .hero img{display:block;width:100%;height:auto;border-radius:10px}
 .about-art .sign{margin-top:18px;font-weight:600}
+.about-art .lead-line{font:600 20px/1.35 'EB Garamond',Georgia,serif;color:var(--ink);margin:0 0 16px}
 .about-art .progress{font-size:17px;color:var(--muted)}
 .about-art .back{margin:32px 0 8px;padding-top:16px;border-top:1px solid var(--rule)}
 .about-art .btns{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 14px}
