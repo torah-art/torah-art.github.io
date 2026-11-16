@@ -29,6 +29,7 @@ h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.2;margin:0}
 article{padding:32px 0 8px}
 article h1{font-size:clamp(30px,6vw,44px);margin:0 0 12px}
 .meta{font-size:14px;color:var(--muted);margin:0 0 28px}
+.byline{font-size:17px;color:var(--ink);margin:-6px 0 8px}
 .meta a{color:var(--muted)}
 .meta a:hover{color:var(--accent)}
 .body h2{font-size:28px;margin:32px 0 10px}
@@ -195,6 +196,7 @@ a.zoom,.gallery a{cursor:zoom-in}
 .amg__p{padding:0 0 18px}
 .amg__p:not([hidden]){animation:amgIn .22s ease-out}
 @keyframes amgIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.amg__in{margin:4px 0 0;font-size:15px;color:var(--muted)}
 .amg__s{margin:14px 0 6px;font:600 13px/1.4 var(--text);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .amg__p .list{border-top:0}
 @media (prefers-reduced-motion:reduce){.amg__p:not([hidden]){animation:none}}
