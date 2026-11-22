@@ -186,6 +186,8 @@ a.zoom,.gallery a{cursor:zoom-in}
 .vru__b span{font-size:14px}.vru__b span::before{content:"\25B6\00a0";color:#b8501c}
 .vru__b:hover{border-color:#b8501c}
 
+.group h2.amg-new,.amg-new{margin:0 0 2px;font:600 13px/1.4 var(--text);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.amg-new + .list{margin-bottom:22px}
 .amg{display:flex;flex-direction:column;border-top:1px solid var(--rule)}
 .amg__g{border-bottom:1px solid var(--rule)}
 .amg__h{margin:0;font:inherit}
