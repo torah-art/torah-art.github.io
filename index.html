@@ -175,6 +175,12 @@ header.hdr-hide{transform:translateY(-101%)}
 .card__new:hover{color:var(--accent)}
 .card__nl{font-weight:600;color:var(--accent)}
 .card:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.card__r{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+.card__h{font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:18px;line-height:1.2;color:var(--ink);margin-top:4px}
+@media (min-width:720px){.card__h{font-size:20px}}
+.card--nw:hover .card__h{color:var(--accent)}
+#newest .card__img{overflow:hidden;min-height:0}
+@media (min-width:720px){#newest .cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
 /*/HOME-CSS*/
 .intro .kicker-after{margin:14px 0 0}
 </style>
@@ -201,6 +207,13 @@ header.hdr-hide{transform:translateY(-101%)}
   
 
   <!--ARTICLES-->
+  <section id="newest" aria-labelledby="newest-h">
+    <div class="wrap">
+      <h2 id="newest-h">New on the Site</h2>
+      <div class="cards"><a class="card card--nw" href="articles/the-artist-as-interpreter-illustration-as-a-way-of-studying-scripture.html"><span class="card__img"><img src="articles/img/2026/11/dura-europos-western-wall.jpg" alt="" loading="lazy"></span><span class="card__in"><span class="card__r">The Bible and the Artist</span><span class="card__h">The Artist as Interpreter: Illustration as a Way of Studying Scripture</span></span></a><a class="card card--nw" href="articles/the-power-of-joy.html"><span class="card__img"><img src="articles/img/2026/11/the-power-of-joy.jpg" alt="" loading="lazy"></span><span class="card__in"><span class="card__r">The Feasts of the LORD</span><span class="card__h">The Power of Joy</span></span></a><a class="card card--nw" href="articles/jubal-the-father-of-all-musicians.html"><span class="card__img"><img src="articles/img/2026/11/jubal-the-father-of-all-musicians.jpg" alt="" loading="lazy"></span><span class="card__in"><span class="card__r">Art Midrash</span><span class="card__h">JUBAL: THE FATHER OF ALL MUSICIANS</span></span></a><a class="card card--nw" href="yuval-book/who-is-yuval/"><span class="card__img"><img src="yuval-book/assets/img/ill-flute.jpg" alt="" loading="lazy"></span><span class="card__in"><span class="card__r">Art Midrash</span><span class="card__h">Who Is Yuval?</span></span></a><a class="card card--nw" href="bezalel-book/who-is-bezalel/"><span class="card__img"><img src="bezalel-book/assets/img/eagle-big.jpg" alt="" loading="lazy"></span><span class="card__in"><span class="card__r">Art Midrash</span><span class="card__h">Who Is Bezalel?</span></span></a><a class="card card--nw" href="articles/ephraim-kalish-books-on-creativity-in-the-bible.html"><span class="card__img"><img src="articles/img/2023/12/e9244775389a.jpg" alt="" loading="lazy"></span><span class="card__in"><span class="card__r">The Bible and the Artist</span><span class="card__h">Ephraim Kalish: Books on Creativity in the Bible</span></span></a></div>
+    </div>
+  </section>
+
   <section class="surface" id="articles" aria-labelledby="articles-h">
     <div class="wrap">
       <h2 id="articles-h">Articles</h2>
