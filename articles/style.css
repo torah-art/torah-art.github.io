@@ -228,6 +228,7 @@ a.zoom,.gallery a{cursor:zoom-in}
 .body figure.pair img{height:auto;margin:0;max-height:none;flex:none}
 .body figure.pair a.zoom{flex:none;display:block}
 .body figure.pair a.zoom img{width:100%}
+.preview-note{margin:0;padding:10px 16px;background:#9a4216;color:#fff;font:600 14px/1.4 'Hanken Grotesk',system-ui,sans-serif;text-align:center}
 .body .note{font-size:14px;line-height:1.5;color:var(--muted);margin-top:28px;padding-top:12px;border-top:1px solid var(--rule)}
 .body sup{font-size:.7em;line-height:0}
 .about-art .lead-line{font:600 20px/1.35 'EB Garamond',Georgia,serif;color:var(--ink);margin:0 0 16px}

@@ -1,0 +1,45 @@
+name: Deferred publication
+on:
+  schedule:
+    - cron: '7 4 * * *'   # every day at 04:07 UTC (06:07 in Israel in winter)
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: site
+      - uses: actions/checkout@v4
+        with:
+          ref: scheduled
+          path: sched
+      - name: Publish the articles whose date has come
+        id: pub
+        run: |
+          today=$(TZ=Asia/Jerusalem date +%F)
+          done=0
+          for d in $(ls sched | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' | sort); do
+            if [[ "$d" > "$today" ]]; then continue; fi
+            echo "Publishing $d"
+            cp -r "sched/$d/." site/
+            git -C sched rm -r -q "$d"
+            done=1
+          done
+          echo "done=$done" >> "$GITHUB_OUTPUT"
+          cd site
+          git config user.name "toraart-bot"; git config user.email "toraart-bot@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then git commit -q -m "Deferred publication $today" && git push -q; fi
+          cd ../sched
+          git config user.name "toraart-bot"; git config user.email "toraart-bot@users.noreply.github.com"
+          if ! git diff --cached --quiet; then git commit -q -m "Published $today" && git push -q; fi
+      - name: Rebuild GitHub Pages
+        if: steps.pub.outputs.done == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Pages build request not accepted; the push itself normally triggers it"
